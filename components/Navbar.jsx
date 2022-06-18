@@ -4,13 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import Logo from '../public/assets/logo.png';
-import { BsThreeDotsVertical } from 'react-icons/bs';
+import { BsThreeDotsVertical, BsSearch } from 'react-icons/bs';
 
 const Navbar = () => {
    return (
       <div className="fixed w-full p-4 h-14 flex flex-nowrap items-center mb-[2px] bg-[#0e0e10] z-10">
          {/* Left Side */}
-         <div className="flex grow items-center justify-start">
+         <section className="flex grow items-center justify-start">
             <Link href="/">
                <a className="flex">
                   <Image
@@ -24,7 +24,7 @@ const Navbar = () => {
                </a>
             </Link>
             <p className="p-4">Browse</p>
-            <div className="p-4">
+            <section className="p-4">
                <Menu as="div" className="relative text-left">
                   <div className="flex">
                      <Menu.Button>
@@ -92,9 +92,23 @@ const Navbar = () => {
                      </Menu.Items>
                   </Transition>
                </Menu>
-            </div>
-         </div>
+            </section>
+         </section>
          {/* Middle */}
+         <section className="hidden md:flex grow-[2] items-center justify-center">
+            <div className="bg-gray-500 text-white flex items-center justify-center max-w-[400px] m-auto p-2 rounded-2xl">
+               <div>
+                  <input
+                     type="text"
+                     placeholder="Search"
+                     className="bg-transparent border-none text-white focus:outline-none"
+                  />
+               </div>
+               <div>
+                  <BsSearch />
+               </div>
+            </div>
+         </section>
          {/* Right Side */}
       </div>
    );
