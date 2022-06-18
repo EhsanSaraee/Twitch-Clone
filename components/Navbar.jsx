@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import Logo from '../public/assets/logo.png';
-import { BsThreeDotsVertical, BsSearch } from 'react-icons/bs';
+import { BsThreeDotsVertical, BsSearch, BsPerson } from 'react-icons/bs';
 
 const Navbar = () => {
    return (
@@ -96,7 +96,7 @@ const Navbar = () => {
          </section>
          {/* Middle */}
          <section className="hidden md:flex grow-[2] items-center justify-center">
-            <div className="bg-gray-500 text-white flex items-center justify-center max-w-[400px] m-auto p-2 rounded-2xl">
+            <div className="bg-gray-500 text-white flex items-center justify-around max-w-[400px] w-full m-auto p-2 rounded-2xl">
                <div>
                   <input
                      type="text"
@@ -105,11 +105,21 @@ const Navbar = () => {
                   />
                </div>
                <div>
-                  <BsSearch />
+                  <BsSearch className="cursor-pointer" />
                </div>
             </div>
          </section>
          {/* Right Side */}
+         <section className="hidden md:flex grow items-center justify-end">
+            <div className="flex items-center">
+               <Link href="/">
+                  <button className="px-4 py-[6px] rounded-lg font-bold bg-[#9147ff] hover:bg-[#9567db] ease-in duration-200 mr-2">
+                     Account
+                  </button>
+               </Link>
+               <BsPerson size={30} className="cursor-pointer" />
+            </div>
+         </section>
       </div>
    );
 };
