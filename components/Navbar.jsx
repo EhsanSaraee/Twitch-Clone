@@ -2,11 +2,14 @@ import { Menu, Transition } from '@headlessui/react';
 import { classNames } from 'helpers/classes';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import Logo from '../public/assets/logo.png';
 import { BsThreeDotsVertical, BsSearch, BsPerson } from 'react-icons/bs';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
+   const [nav, setNav] = useState(false);
+
    return (
       <div className="fixed w-full p-4 h-14 flex flex-nowrap items-center mb-[2px] bg-[#0e0e10] z-10">
          {/* Left Side */}
@@ -119,6 +122,38 @@ const Navbar = () => {
                </Link>
                <BsPerson size={30} className="cursor-pointer" />
             </div>
+         </section>
+         {/* Hamburger Menu */}
+         <div
+            className="block md:hidden z-10 cursor-pointer"
+            onClick={() => setNav(!nav)}
+         >
+            {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+         </div>
+         {/* Mobile Menu */}
+         <section
+            className={
+               nav
+                  ? 'md:hidden fixed top-0 left-0 w-full h-screen bg=[#0e0e10] flex justify-center items-center ease-in duration-300'
+                  : 'md:hidden fixed top-[-100%] left-0 w-full h-screen bg=[#0e0e10] flex justify-center items-center ease-in duration-300'
+            }
+         >
+            <nav>
+               <ul className="text-center">
+                  <li className="p-4 text-3xl font-bold">
+                     <Link href="/">Home</Link>
+                  </li>
+                  <li className="p-4 text-3xl font-bold">
+                     <Link href="/">Live Channels</Link>
+                  </li>
+                  <li className="p-4 text-3xl font-bold">
+                     <Link href="/">Top Categories</Link>
+                  </li>
+                  <li className="p-4 text-3xl font-bold">
+                     <Link href="/">Account</Link>
+                  </li>
+               </ul>
+            </nav>
          </section>
       </div>
    );
