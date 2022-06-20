@@ -1,6 +1,6 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Account = () => {
    const { data: session } = useSession();
@@ -37,8 +37,14 @@ const Account = () => {
             onClick={() => signIn()}
             className="flex items-center justify-center p-3 bg-gray-600 border border-gray-600 rounded-2xl hover:bg-gray-500 ease-in duration-200 my-2"
          >
-            {' '}
             <FaGithub className="mr-2" /> Sign in with{' '}
+            <span className="font-bold pl-1">Github</span>{' '}
+         </button>
+         <button
+            onClick={() => signIn()}
+            className="flex items-center justify-center p-3 bg-blue-600 border border-blue-600 rounded-2xl hover:bg-blue-500 ease-in duration-200 my-2"
+         >
+            <FaGoogle className="mr-2" /> Sign in with{' '}
             <span className="font-bold pl-1">Github</span>{' '}
          </button>
       </section>
