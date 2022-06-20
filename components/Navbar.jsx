@@ -115,7 +115,7 @@ const Navbar = () => {
          {/* Right Side */}
          <section className="hidden md:flex grow items-center justify-end">
             <div className="flex items-center">
-               <Link href="/">
+               <Link href="/account">
                   <button className="px-4 py-[6px] rounded-lg font-bold bg-[#9147ff] hover:bg-[#9567db] ease-in duration-200 mr-2">
                      Account
                   </button>
@@ -150,7 +150,7 @@ const Navbar = () => {
                      <Link href="/">Top Categories</Link>
                   </li>
                   <li className="p-4 text-3xl font-bold">
-                     <Link href="/">Account</Link>
+                     <Link href="/account">Account</Link>
                   </li>
                </ul>
             </nav>
