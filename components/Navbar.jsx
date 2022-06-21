@@ -214,16 +214,28 @@ const Navbar = () => {
          >
             <nav>
                <ul className="text-center">
-                  <li className="p-4 text-3xl font-bold">
+                  <li
+                     onClick={() => setNav(false)}
+                     className="p-4 text-3xl font-bold"
+                  >
                      <Link href="/">Home</Link>
                   </li>
-                  <li className="p-4 text-3xl font-bold">
+                  <li
+                     onClick={() => setNav(false)}
+                     className="p-4 text-3xl font-bold"
+                  >
                      <Link href="/">Live Channels</Link>
                   </li>
-                  <li className="p-4 text-3xl font-bold">
+                  <li
+                     onClick={() => setNav(false)}
+                     className="p-4 text-3xl font-bold"
+                  >
                      <Link href="/">Top Categories</Link>
                   </li>
-                  <li className="p-4 text-3xl font-bold">
+                  <li
+                     onClick={() => setNav(false)}
+                     className="p-4 text-3xl font-bold"
+                  >
                      <Link href="/account">Account</Link>
                   </li>
                </ul>
