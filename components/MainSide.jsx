@@ -1,3 +1,4 @@
+import Categories from './Categories';
 import Hero from './Hero';
 import IconBar from './IconBar';
 import LiveChannels from './LiveChannels';
@@ -8,6 +9,7 @@ const MainSide = () => {
          <Hero />
          <LiveChannels />
          <IconBar />
+         <Categories />
       </section>
    );
 };

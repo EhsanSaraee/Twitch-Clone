@@ -1,7 +1,6 @@
 import LiveChannelItem from './LiveChannelItem';
 import Live1 from '../public/assets/live/live1.jpeg';
 import Live2 from '../public/assets/live/live2.jpeg';
-import Live3 from '../public/assets/live/live3.jpeg';
 import Live4 from '../public/assets/live/live4.jpeg';
 import Live5 from '../public/assets/live/live5.jpeg';
 import Live6 from '../public/assets/live/live6.jpeg';
@@ -9,14 +8,13 @@ import Live7 from '../public/assets/live/live7.jpeg';
 import Live8 from '../public/assets/live/live8.jpeg';
 import Live9 from '../public/assets/live/live9.jpeg';
 import Live10 from '../public/assets/live/live10.jpeg';
-import Live11 from '../public/assets/live/live11.jpeg';
 import Live12 from '../public/assets/live/live12.jpeg';
 
 const LiveChannels = () => {
    return (
       <div className="p-2 md:p-8" id="live">
          <h2 className="text-xl font-bold px-2">
-            <span className="text-[#9147ff]">Live Channels</span>we think
+            <span className="text-[#9147ff]">Live Channels</span> we think
             you&apos;ll like
          </h2>
          {/* Container */}
@@ -50,11 +48,11 @@ const LiveChannels = () => {
                game="One Hand Clapping"
             />
             <LiveChannelItem
-               img={Live5}
+               img={Live6}
                profile_img="https://static-cdn.jtvnw.net/jtv_user_pictures/bed3ea39-265b-4632-b866-598bb8c045dd-profile_image-50x50.png"
-               title="BIG Mario Kart session"
+               title="Mars is so OP!"
                user="Bigpuffer"
-               game="Mario Kart 8 Deluxe"
+               game="Dota 2"
             />
             <LiveChannelItem
                img={Live2}
