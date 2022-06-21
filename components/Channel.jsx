@@ -3,11 +3,11 @@ import { BsDot } from 'react-icons/bs';
 
 const Channel = ({ username, avatar, game_name, rank }) => {
    return (
-      <section className="inline-flex w-full items-center py-[2px]">
-         <div>
+      <section className="p-1 inline-flex w-full items-center py-[2px] cursor-pointer hover:bg-gray-700 ease-in duration-100 rounded-xl">
+         <div className="pr-1">
             <Image src={avatar} alt={username} width={40} height={40} />
          </div>
-         <div className="hidden lg:flex justify-between w-full">
+         <div className="hidden xl:flex justify-between w-full">
             <div>
                <p className="text-sm">{username}</p>
                <p className="text-gray-400 text-sm">{game_name}</p>
